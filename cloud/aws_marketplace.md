@@ -6,9 +6,9 @@ When you first launch your instance, a new key pair is generated for delegated v
 
 The keypair is stored at `/opt/sirius-chain/mainnet-peer/node_validator.txt`.
 
-You do not need to use this key and you may always generate your own keypair with a wallet and replace the private key located at `/opt/sirius-chain/mainnet-peer/resources/config-harvesting.properties`.
+You do not need to use this key and you can generate your own keypair with a wallet and replace the private key located at `/opt/sirius-chain/mainnet-peer/resources/config-harvesting.properties`.
 
-Be sure to restart the the blockchain node when you update that key.
+Be sure to restart the blockchain node when you update that key.
 
 ## Node Management
 
@@ -37,7 +37,7 @@ sudo systemctl restart sirius-chain.service
 
 You can enable the service to allow the node to restart when the instance reboots or if the node encounters errors.
 
-This should be enabled by default but this is the command to enable it:
+This should be enabled by default. The command to enable it is as follows:
 
 ```sh
 sudo systemctl enable sirius-chain.service
@@ -65,7 +65,7 @@ Log files are also available at the following directory: `/opt/sirius-chain/main
 
 ### Upgrading
 
-The easiest method to perform upgrades in the future would be to launch a new instance as it will also include the latest system security patches.
+The easiest method to perform future upgrades would be to launch a new instance as it will also include the latest system security patches.
 
 You may also update the node by using a newer Docker tag by replacing the tag inside the `docker-compose.yml` file inside `/opt/sirius-chain/mainnet-peer`.
 
